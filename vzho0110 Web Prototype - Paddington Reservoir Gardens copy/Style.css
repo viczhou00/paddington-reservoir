@@ -1,0 +1,882 @@
+/* Resets default styles for all elements*/
+* {
+  margin: 0; /* Removes default margin from all elements */
+  padding: 0; /* Removes default padding from all elements */
+  max-width: 100%; /* Limits the max width of all elements to the viewport */
+  box-sizing: border-box; /* Simplifies layout management by ensuring specified widths and heights remain consistent*/
+  scroll-behavior: smooth; /* Enables smooth scrolling for internal links so page scrolls smoothly to target section*/
+}
+
+body {
+  font-family: "Montserrat", sans-serif; /* Sets the font to "Montserrat" for the entire document */
+  background-color: white; /* Sets the background colour of the body to white */
+  overflow-x: hidden; /* Hides horizontal overflow to prevent scrollbars */
+}
+
+.background-container{
+  height: 100vh; /* Sets height of the background container to 100 viewport height */
+  /* This background image was taken by myself; Copyright Victoria Zhou */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/Paddington\ Landing\ Page.JPG"); 
+  /* Inserts the background image and sets gradient overlay for greater contrast */
+  background-size: cover; /* Ensures the background image covers the entire container */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-position: center; /* Centres the background image */
+  
+}
+
+/* Navbar container styling */
+.navbar-container {
+  display: flex; /* uses flexbox to set the contents with flexible properties  */ 
+  justify-content: space-between; /* Distributes items evenly */
+  align-items: center; /* Vertically centres items */
+  background-color: white; /* Sets background colour to white */
+  border-bottom: 1px solid #ddd; /* Adds a light gray border at the bottom of the Navbar */
+  z-index: 100; /* Ensures the Navbar appears above all other content */
+  top: 0; /* Positions the Navbar at the top */
+  position: fixed; /* Fixes the Navbar at the top of the viewport */
+  width: 100%; /* Ensures navbar spans across the full width of the viewport */
+ }
+
+ /* Logo styling within the Navbar */
+.logo { 
+  height: 50px; /* Sets a fixed height for the logo at 50px */ 
+  min-width: 90px; /* Sets a minimum width for the logo at 90px */
+}
+
+/* Middle section (Paddington Reservoir Gardens title) styling of the navbar */
+.middle-section {
+  margin-left: 30px; /* Adds 30px margin to the left */
+  white-space: nowrap;/* Prevents text wrapping so that it stays a single line */
+  text-align: center; /* Centres text */
+}
+
+/* Navigation styling */ 
+nav ul{
+  width: 100%; /* Sets the width of the navigation list */
+  list-style: none; /* Removes default list styling like the underlines */
+  display: flex; /* uses flexbox to set the contents with flexible properties */
+  justify-content: flex-end; /* Aligns items to the right */
+  align-items: center; /* Vertically centres the items */
+}
+
+nav li{
+  height: 50px; /* Sets fixed height of 50px for navigation items */
+}
+
+nav a{
+  height: 100%; /* Makes the anchor tag fill the full height of the list item */
+  padding: 0 30px; /* Adds horizontal padding of 30px */
+  text-decoration: none; /* Removes underline from links */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Vertically centres text within links */
+  color: black; /* Sets text colour to black */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+  background-color: #b3db9a; /*Changes background colour to light green on hover */
+}
+
+/* Hover effect for hamburger menu */
+.hamburger-menu:hover{
+  background-color: #b3db9a; /* Changes background colour on hover to light green */
+  height: 50px; /* Sets a fixed height of 50px */
+}
+
+/* Sidebar styling for mobile version of the menu */
+.sidebar {
+  position: fixed; /* Fixes the sidebar to the right */
+  top: 0; /* Positions sidebar to the top */
+  right: 0; /* Positions sidebar to the right */
+  height: 100vh; /* Sets full viewport height */
+  width: 250px; /* Sets fixed width at 250px */
+  z-index: 999; /* Ensures sidebar appears above all other content */
+  background-color: rgba(255,255,255,0.8); /* Sets a semi-transparent background */
+  backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1); /* Adds a shadow effect */
+  display: none; /* Hides sidebar by default */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: flex-start; /* Aligns items to the start on the cross axis*/
+  justify-content: flex-start; /* Aligns items to the start on the main axis*/
+}
+
+/* List styling within the sidebar */
+.sidebar li {
+  width: 100%; /* Sets width to fill the sidebar */
+}
+
+.sidebar a {
+  width: 100%; /*Sets anchor tag width to fill the sidebar item */
+
+}
+
+/* Hamburger menu styling for mobile navigation */
+.hamburger-menu{
+  display: none; /* Hides hamburger menu by default */
+}
+
+/* Hero section styling */
+.hero-container {           
+  justify-content: flex-start; /* Align text to the left */
+  align-items: flex-start; /* Aligns items to the top */
+  height: 100vh; /* Hero section fills full height of the viewport */
+  width: 80vh; /* A fixed width of 80 viewport height has been set */
+  padding-top: 120px; /* Adds top padding of 120px */
+  padding-left: 40px; /* Adds left padding of 40px */
+}
+
+/* Text styling in the hero section */
+.hero-text {
+  color: white; /* Sets text colour to white */
+  max-width: 80%;  /* Limits the width of the hero text to 80% of the screen */
+  overflow: hidden; /*Hides overflow text */
+}
+
+/* Headings and paragraph styles in the hero text */
+.hero-text h1 {
+  font-size: 2.5rem; /* Sets the font size for h1 to 2.5rem */
+  font-weight: bold; /* makes h1 bold */
+}
+
+.hero-text h2 {
+  font-size: 1.8rem; /* Sets font size to 1.8rem for h2 */
+}
+
+.hero-text p {
+  font-size: 1rem; /* Sets font size for paragraph text to 1rem */
+}
+
+/* Overview text (second text section) styling */ 
+.overview-text {
+  position: absolute; /* Positions absolutely within the container so it doesn't affect the positioning of other elements */
+  bottom: 100px; /* Positions from the bottom at 100px */
+  right: 20px; /* Positions from the right at 20px */
+  color: white; /* Sets text colour to white */
+  font-size: 1.5rem; /* Sets font size to 1.5rem */
+  text-align: right; /* Aligns text to the right */
+  z-index: 1; /* Z-index places it above other elements */
+}
+
+/* Wrapper for the text content */
+.text-wrapper {
+  max-width: 500px; /* Sets a maximum width for the text wrapper at 500px */
+  text-align: left; /* Aligns text to the left */
+  padding: 40px; /* Adds 40px of padding on all sides */
+}
+
+/* Keyframes for scroll-down button animation */
+@keyframes scroll-down {
+  0%{
+      transform: translateY(20%); /* Starts with a downward position */
+      opacity: 0; /* Starts invisible */
+  }
+  50% {
+      transform: translateY(-20%); /* Moves upward */
+      opacity: 1; /* Becomes visible */
+  }
+  100% {
+      transform: translateY(20%); /* Moves downward again */
+      opacity: 0; /* Becomes invisible again */
+  }
+}
+
+/* Scroll-down button styling */
+.scroll-down {
+  width: 30px; /* Sets width of button at 30px */
+  height: 60px; /* Sets height of button at 60px */
+  display: grid; /* Uses grid layout, allowing for 2D arrangement of rows and columns */
+  place-content: center; /* Centres content */
+  font-size: 30px; /* Sets size of button at 30px */
+  color: white; /* Sets button colour to white */
+  border: 3px solid rgba(255,255,255, 0.4); /* Adds a border with transparency */
+  border-radius: 100px; /* Rounds corners by 100px*/ 
+  position: absolute; /* Positions absolutely meaning it won't affect the layout of other elements*/
+  bottom: 48px; /* Positions 48px from the bottom */
+  left: 50%; /* Centres horizontally */
+  text-decoration: none; /* Removes underline from link */ 
+}
+
+/* Animation applied to scroll-down icon */ 
+.scroll-down .las {
+  animation: scroll-down 2s ease infinite; /* Applies scroll-down animation infinitely */
+}
+
+/* Styling of title of gallery */
+.gallery-title {
+  display: block; /* Displays as block element so it can have margin and padding applied */
+  font-weight: 700; /* Sets font-weight to bold */
+  font-size: 40px; /* Sets font size to 40px */
+  padding-top: 70px; /* Adds top padding of 70px */
+  padding-left: 50px; /* Adds left padding of 50px */
+}
+
+/* Gallery styling */
+.gallery{
+  max-width: 1000px; /* Sets a maximum width of 1000px for the gallery */
+  display: flex; /* uses flexbox to set the contents with flexible properties */
+  overflow-x: scroll; /* Enables horizontal scrolling */
+}
+
+/* Gallery item styling */
+.gallery div{
+  width: 100%; /* Sets width to fill the gallery */
+  display: grid; /* Uses the grid layout, allowing for 2D arrangement of rows and columns*/
+  grid-template-columns: auto auto auto; /* Creates three equal columns */
+  grid-gap: 20px; /* Applies a grid gap between the items of 20px */
+  padding-bottom: 20px; /* Bottom padding used for spacing between the gallery and footer */
+  flex: none; /* Ensures the item does not grow or shrink in a flex container */
+}
+
+/* Gallery image styling */
+.gallery div img{
+  border-radius: 20px; /* Rounds the corners of the images by 20px */
+  width: 100%; /* Sets image width to fill its container */
+  height: 400px; /* Fixes image height to 400px */
+  object-fit: cover; /* Ensures the image covers the area without distorting the aspect ratio */
+  overflow: hidden; /* Prevents content from overflowing from the image container */
+  transition: transform 0.5s; /* Adds a smooth zoom effect on hover */
+}
+
+/* Styling the gallery webkit */
+.gallery::-webkit-scrollbar{
+  display: none; /* Hides the scrollbar for a cleaner look */
+}
+
+/* Styling the positions of the images */
+.gallery-wrap{
+  display:flex; /* uses flexbox to set the contents with flexible properties */
+  align-items: center; /* Centres items vertically within the container */
+  justify-content: center; /* Centres items horizontally within the container */
+  margin: 5% auto; /* Adds 5% margin on the top and bottom and auto centres it horizontally within its parent container */
+}
+
+/* Styling the back button and forward button on the gallery */
+#backBtn, #forwardBtn{
+  width: 50px; /* Sets the button width for consistent sizing */
+  cursor: pointer; /* Changes cursor to pointer on hover for clickability */
+  margin: 40px; /* Adds margins of 40px around the buttons for separation */
+}
+
+/* Styling the hover and transform in the gallery */
+.gallery div img:hover{
+  cursor:pointer; /* Adds pointer cursor on hover */
+  transform: scale(1.1) /* Scales the image for a zoom effect */
+}
+
+/* Styling the footer */
+footer {
+position: relative; /* Position set to relative to allow it to be positioned relative to its original place in the document flow */
+width: 100%; /* Sets the span of the footer to full width */
+background: #4A4A4A; /* Dark background for contrast */
+height: 150px; /* Fixed height at 150px for consistency */
+display: flex; /* Enables flexbox layout for arranging items within the footer */
+justify-content: center; /* Horizontally centres items in the footer */
+align-items: center; /* Vertically centres items in the footer */
+flex-direction: column; /* Stack elements vertically */
+}
+
+/* Styling that positions social icons and menu links */
+footer .social-icon, 
+footer .menu {
+  position: relative; /* Position set to relative to allow it to be positioned relative to its original place in the document flow */
+  display: flex; /* Enables flexbox layout for easier alignment of items */
+  justify-content: center; /* Horizontally centres items within the container */
+  align-items: center; /* Vertically centres items within the container */
+  margin: 10px 0; /* Adds vertical spacing (10px) on top and bottom to separate elements from others */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line if they exceed the container's width */
+}
+
+/* Styling the social-icon and menu */
+footer .social-icon li,
+footer .menu li {
+  list-style: none; /* Removes default list bullet points for list items */
+}
+
+/* styling social icons in the footer */
+footer .social-icon li a {
+  font-size: 2em; /* Increases font size to 2em, making icons more prominent */
+  color: #fff; /* Sets text colour to white */
+  margin: 0 10px; /* Adds 10px of horizontal space on each side of each icon for better spacing */
+  display: inline-block; /* Makes the element respect padding and margin settings for animations */
+  transition: 0.5s; /* Smoothly transitions properties over 0.5 seconds */
+}
+
+/* Styling the social icons to give the icons a floating appearance when hovered over */
+footer .social-icon li a:hover {
+  transform: translateY(-10px);  /* Moves the icon 10px upwards when hovered */
+}
+
+/* Styling footer menu links */
+footer .menu li a {
+  font-size: 1em; /* Sets font size to 1em for readability */
+  color: #fff; /* Ensures the link text colour is white */
+  margin: 0 10px; /* Adds 10px of space on each side of the links for even spacing */
+  display: inline-block; /* Makes each link respect margins and align horizontally */
+  transition: 0.5s; /* Smooth transition effect for opacity on hover */
+  text-decoration: none; /* Removes the default underline from links */
+  opacity: 0.75; /* Sets an initial transparency for subtle visual effect */
+}
+
+/* Styling footer menu links to be more interactive by giving visual feedback */ 
+footer .menu li a:hover {
+  opacity: 1; /* Increases opacity to full visibility when hovered */
+}
+
+/* Styles the paragraph text in the footer (copyright attribution) */
+footer p {
+  color: #fff; /* Sets text colour to white for contrast against the footer background */
+  text-align: center; /* Centres the paragraph text horizontally */
+  margin-top: 10px; 
+  margin-bottom: 10px; /* Adds vertical spacing to separate the paragraph from other footer elements */
+  font-size: 1em; /* Sets a readable font size at 1em */
+  opacity: 0.75; /* Adds a slight transparency for a less prominent appearance */
+}
+
+/* Styling the container for the about section to set up a grid layout for paragraph and image elements */
+.container {  
+  display: grid; /* Enables CSS Grid for flexible, 2D layout */
+  grid-template-columns: 1fr 1fr; /* Defines a two-column grid with each column taking up an equal fraction */
+  gap: 40px 40px; /* Sets 40px spacing between columns and rows */
+  padding-left: 40px; /* Adds 40px padding on the left for spacing */
+  padding-right: 40px; /* Adds 40px padding on the right for spacing */
+  padding-bottom: 40px; /* Adds 40px padding at the bottom for spacing */
+  align-items: start; /* Aligns items at the start of each cell vertically */
+  grid-auto-flow: row; /* Arranges grid items by row, filling rows before creating new rows */
+  grid-template-areas: /* Defines custom grid areas for specific item placement */
+    "AboutParagraph1 AboutImage1 "
+    "AboutImage2 AboutParagraph2"
+    "AboutParagraph3 AboutImage3";
+}
+
+/* Styling the paragraphs in the container to add spacing for each paragraph to serve as a line break */
+.container p{
+  padding-bottom: 1em; /* Adds 1em space below paragraphs to separate them vertically */
+}
+
+/* Styling the images so that they are responsive and fit in the grid */
+.AboutImage1 img, .AboutImage2 img, .AboutImage3 img {
+  width: 100%; /* Makes images fully responsive to container width */
+  height: auto; /* Adjusts height to maintain image aspect ratio */
+  max-width: 100%; /* Ensures images don’t exceed container width */
+  object-fit: cover; /* Ensures images cover the container without distortion */
+  display: flex; /* Provides flexible alignment if needed */
+  align-items: center; /* Centres images vertically if contained in a flex layout */
+}
+
+/* Styling for about paragraph 1 */
+.AboutParagraph1 {  
+  font-size: 1.5rem; /* Sets font size to 1.5rem for readability */
+  line-height: 1.6; /* Increased line spacing for readability */
+  letter-spacing: 0.02em; /* Adds slight letter spacing for improved clarity */
+  color: #333; /* Dark color for high contrast */
+  text-align: left; /* Aligns text to the left */
+  padding-top: 80px; /* Adds 80px padding on top of the paragraph for spacing */
+  /* padding-left: 40px;
+  padding-right: 40px; */
+}
+
+/* Styling for about image 1 */
+.AboutImage1  { 
+  grid-area: AboutImage1 ; /* Assigns each image to a specific grid area for custom layout */
+}
+
+/* Styling for about image 2 */
+.AboutImage2 { 
+  grid-area: AboutImage2; /* Assigns each image to a specific grid area for custom layout */
+}
+
+.AboutParagraph2 { 
+  font-size: 1.5rem; /* Sets font size to 1.5rem for readability */
+  line-height: 1.6; /* Increased line spacing for readability */
+  letter-spacing: 0.02em; /* Adds slight letter spacing for improved clarity */
+  color: #333; /* Dark color for high contrast */
+  text-align: left; /* Aligns text to the left */
+}
+
+/* Styling for about image 3 */
+.AboutParagraph3 { 
+  font-size: 1.5rem; /* Sets font size to 1.5rem for readability */
+  line-height: 1.6; /* Increased line spacing for readability */
+  letter-spacing: 0.02em; /* Adds slight letter spacing for improved clarity */
+  color: #333; /* Dark color for high contrast */
+  text-align: left; /* Aligns text to the left */
+}
+
+.AboutImage3 { 
+  grid-area: AboutImage3; /* Assigns each image to a specific grid area for custom layout */
+}
+
+/* General paragraph styling */
+p {
+  font-size: 1rem; /* Sets default font size for paragraph text */
+}
+
+/* Events heading styling to create a visually distinct section start */
+.events-header h1 {
+  font-size: 2.5em;
+  padding-top: 100px; /* Adds 100px space above the heading */
+  padding-left: 80px; /* Adds 100px space above the heading */
+}
+
+/* Events container styling for flex layout */
+.events-container{
+  display: flex; /* Enables flexbox layout for arranging child elements */
+  justify-content: space-between;  /* Distributes child elements evenly, with space in between */
+  flex-wrap: wrap; /* Allows child elements to wrap to a new line if container width is exceeded */
+  margin-top: 100px; /* Adds spacing above the container */
+  margin: 70px; /* Adds 70px of space on all sides */
+}
+
+
+/* Styling individual event card */
+.card{
+  flex: 1 1 30%; /* Sets flexible basis of 30% width for each card */
+  width: 325px; /* Limits card width to 325px for a consistent layout */
+  overflow: hidden;  /* Hides overflow content */
+  margin: 20px; /* Adds 20px margin around each card for spacing */
+  max-width: 100% /* Ensures card doesn’t exceed container width */
+}
+
+/* Image styling within cards */
+.card img{
+  width: 100%; /* Images span full width of the card */
+  height: 250px; /* Fixes image height to 250px */
+  object-fit: cover; /* Scales image to cover the space without distortion */
+}
+
+/* Giving date and type elements flex layout */
+.date-type {
+  display: flex; /* Enables flex layout for items inside date-type */
+  align-items: center; /* Centres items vertically */
+  justify-content: space-between; /* Places space between items */
+}
+
+/* Styling for events-title and head-on to provide distinct typography */
+.events-title {
+  font-size: 30px; /* Large font size at 30px for visibility */
+  font-weight: 700; /* Bold font for emphasis */
+  padding-bottom: 20px; /* Adds spacing below the title of 20px */
+  padding-top: 20px; /* Adds spacing above the title of 20px */ 
+}
+
+.card-content .events-title{
+  text-decoration: none; /* Removes underline from text */
+  font-size: 30px; /* Large font size at 30px for visibility */
+  font-weight: 700; /* Bold font for emphasis */
+  padding-bottom: 20px; /* Adds spacing below the title of 20px */
+  padding-top: 20px; /* Adds spacing above the title of 20px */ 
+  color: black; /* Changes text colour to black */
+  display: inline-block; /* Allows user to apply padding as expected */
+}
+
+.card-content .events-title:hover {
+  color: green; /* Hover colour will be green */
+}
+
+.head-on {
+  font-size: 20px; /* Medium font size of 20px for readability */
+  font-weight: 400; /* Normal font weight */
+  padding-bottom: 20px; /* Adds spacing below */
+}
+
+/* styling for view details button */ 
+.btn {
+  background-color: transparent; /* Transparent background for minimal styling */
+  text-decoration: none; /* Removes underline from text */
+  color: black; /* Black text for visibility */
+  font-weight: 700; /* Bold font weight for emphasis */
+  font-size: 16px;
+}
+
+.btn:hover {
+  color: green; /* Changes text color to green on hover for visual feedback */
+}
+
+/* styling the map-section layout */
+.map-section {
+  min-height: 90vh; /* Sets minimum height to 90% of the viewport height */
+  display: flex; /* Uses flexbox for layout */
+  align-items: center; /* Centres items vertically within the section */
+  justify-content: center; /* Centres items horizontally */
+  gap: 5em; /* Adds a 5em space between child elements */
+  padding: 0px 20px; /* Adds horizontal padding to the section of 20px */
+}
+
+/* Container and text styling */
+.box {
+  max-width: 600px; /* Limits the width of the box for readability */
+}
+
+.box h1{
+  font-size: 4em; /* Large font size for main heading */
+}
+
+.box p{
+  padding-top: 30px; /* Adds spacing above paragraph text */
+  font-size: 1em; /* Sets font size for paragraph text */
+  letter-spacing: 0.02em; /* Adds slight letter spacing */
+  line-height: 1.6; /* Improves readability with increased line height */
+}
+
+/* iframe styling for interactive map */
+iframe{
+  border-radius: 2em; /* Adds rounded corners of 2em to the iframe for a softer appearance */
+
+}
+
+.map-container {
+  width: 100%; /* Ensures the container takes full width */
+  max-width: 100vw; /* Limits width to full viewport width */
+  padding: 0 1rem; /* Adds a bit of padding to the sides */
+}
+
+.map-container h1 {
+  padding-left: 50px; /* Adds left padding of 50px to position the heading */
+  padding-bottom: 20px; /* Adds space below the heading of 20px */
+  font-size: 1.8em; /* Sets heading size at 1.8em*/
+  margin-bottom: 1rem; /* Adds spacing after heading at 1rem*/
+}
+
+/* Attraction name text styling */
+.attraction-name i{
+  font-size: 1.2rem; /* Sets icon font size */
+}
+
+.attraction-name span{
+  font-style: italic; /* Italicizes text for visual emphasis */
+}
+
+/* Styling grid layout for nearby-grid */
+.nearby-grid{
+  display: grid; /* Uses grid layout for structuring items */
+  grid-template-columns: repeat(4, 1fr); /* Sets a 4-column layout */
+  gap: 1rem; /* Adds spacing between grid items */
+  padding-left: 50px; /* Adds padding on the left side */
+  padding-right: 50px; /* Adds padding on the right side */
+  padding-bottom: 100px; /* Adds padding at the bottom */
+}
+
+/* Styling images in nearby-cards */
+.nearby-grid .nearby.cards img {
+  width: 100%; /* Ensures images span full width of grid item */
+  height: 200px; /* Fixes image height */
+  object-fit: cover; /* Ensures images cover space without distortion */
+  border-radius: 10px; /* Optional: to round the corners */
+  cursor: pointer; /* Adds pointer cursor on hover */
+}
+
+/* Styling the attraction names with alignment, spacing and interactivity */
+.attraction-name {
+  font-size: 1.2em; /* Sets size for attraction names at 1.2em */
+  padding-top: 1rem; /* Adds space above the name at 1rem */
+  text-align:left; /* Aligns text to the left */
+  display: flex; /* Flexbox for icon and text alignment */
+  align-items: center; /* Centres items vertically */
+  gap: 0.5rem; /* Adds space between icon and text */
+  /*cursor: pointer; /* Adds pointer cursor for interactive feel */
+}
+
+/* Styling the header of the visit section */
+.visit-header {
+  padding-top: 100px; /* Adds top padding of 100px */
+  padding-bottom: 60px; /* Adds bottom padding of 60px */
+  padding-left: 40px; /* Adds left padding of 40px */
+  padding-right: 20px; /* Adds right padding of 20px */
+ }
+
+ /* Styling the section of text under the header */
+ .opening-info {
+  padding-top: 0px; /* No padding at the top */
+  padding-right: 20px; /* Adds right padding of 20px */
+ }
+
+ /* Styling the text and pictures into two columns with structured padding and alignment */
+.visit-us-paragraph-picture {
+  display: grid; /* Uses grid for structured layout */
+  padding-top: 80px; /* Adds top padding of 80px */
+  grid-template-columns: auto auto; /* Creates two equal-width columns */
+  gap: 10px 100px; /* Adds horizontal of 10px and vertical gap of 100px*/ 
+  padding-right: 40px; /* Adds right padding */
+  align-items: start; /* Aligns items at the top */
+  grid-auto-flow: row; /* Places items in rows */
+  grid-template-areas: 
+  "visit-header visit-image-container" /* Defines custom grid areas */
+} 
+
+/* Visit image styling */
+.visit-image-container img {
+  padding-left: 40px; /* Adds left padding of 40px */
+  width: 100%; /* Makes image responsive */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Prevents image from exceeding container width */
+  object-fit: cover; /* Ensures image covers space proportionally */
+  display: flex;  /* Sets the display to flex, allowing alignment adjustments */
+  align-items: center; /* Centres image within flex container */
+  margin-bottom: 50px; /* Adds space below image of 50px */
+}
+
+/* Visit header styling */
+.visit-header {  
+  font-size: 1.5rem; /* Sets font size for the header at 1.5rem */
+  line-height: 1.6; /* Improves readability with increased line spacing */
+  letter-spacing: 0.02em; /* Adds slight spacing between letters */
+  color: #333; /* Sets text color to dark gray */
+  text-align: left; /* Aligns text to the left */
+  padding-top: 80px; /* Adds padding of 80px above the header */
+}
+
+/* Visit image container grid area */
+.visit-image-container {
+  grid-area: visit-image-container; /* Sets the grid area for the visit image container */
+}
+
+/* Features section padding */
+ .features {
+  padding-top: 0px; /* No padding added to the top */
+  padding-bottom: 150px; /* Adds 150px padding at the bottom */
+  padding-left: 40px; /* Adds padding of 40px on the left side */
+  padding-right: 20px; /* Adds padding of 20px on the right side */
+  padding-bottom: 25px; /* Adds padding of 25px at the bottom */
+ }
+
+/* Card container layout */
+.card-container{
+  display: flex; /* Sets flexbox for the container layout */
+  position: relative; /* Sets positioning relative for positioning inner elements */
+  justify-content: center; /* Centres all items horizontally */
+  align-items: center; /* Centres items vertically within the container */
+  flex-wrap: wrap; /* Allows items to wrap to the next line if they don't fit */
+  padding-bottom: 50px; /* Adds 50px padding at the bottom of the container */
+}
+
+/* Visit box (individual card) styling */
+.card-container .visit-box{
+  width:300px; /* Sets fixed width of each card */
+  height: 350px; /* Sets fixed height of each card */
+  border-radius: 10px; /* Rounds the card corners with a radius of 10px */
+  background-color: #fff; /* Sets card background color to white */
+  margin: 20px; /* Adds 20px margin around each card */
+  position: relative; /* Relative positioning for child element adjustments */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the card */
+
+}
+
+/* Content inside each visit box */
+.card-container .visit-box .box-content {
+  display: flex; /* Uses flexbox layout */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centres items horizontally */
+  text-align: center; /* Centres text within the box */
+  height: 100%; /* Makes content span the full height of the box */
+  padding: 20px; /* Adds 20px padding around the content */
+}
+
+/* Icon styling in the box content */
+.card-container .visit-box .box-content .icon{
+  font-size: 48px; /* Sets icon font size to 48px */
+  padding: 15px; /* Adds padding of 15px around the icon */
+}
+
+/* Title styling within box content */
+.card-container .visit-box .box-content .title{
+  font-size: 24px; /* Sets font size for the title text */
+  font-weight: bold; /* Makes the title bold */
+  padding: 10px; /* Adds 10px padding around the title */
+}
+
+/* Description styling at the bottom of the visit box */
+.card-container .visit-box .box-content .description {
+  position: absolute; /* Positions the description within the box */
+  bottom: 40px; /* Positions description 40px from the bottom of the box */
+  max-width: 80%; /* Limits description width to 80% of the container */
+  font-size: 14px; /* Sets font size of description text */
+  margin-top: auto; /* Automatically adds margin above the description to push it down */
+  line-height: 1.6; /* Sets line height for readability */
+}
+
+/* Media query for devices with a maximum width of 768px like mobiles and tablets */
+@media only screen and (max-width: 768px){
+
+  /* Positions the scroll down indicator to the left at 45% of the background
+  This is due to it not being centred when the screen minimises */
+  .scroll-down {
+    left:45%;
+  }
+
+  /* Adds top padding to the gallery title to provide space */
+  .gallery-title {
+    padding-top: 50px;  /* Reduced margin for mobile devices */
+  }
+  
+  /* Sets the gallery layout to a single column on mobile devices */
+  .gallery div {
+    grid-template-columns: auto; /* Display one images per row on mobile 
+    Due to issues with the Javascript only 2 images will show when scrolled*/
+  }
+ 
+  /* Sets a fixed height for images in the gallery to maintain uniformity */
+  .gallery div img{
+    height: 300px;
+  }
+
+   /* Adds vertical margin to the gallery wrapper for spacing */
+  .gallery-wrap{
+    margin: 40px 0px; /* Provides vertical spacing of 40px around the gallery */
+  }
+
+  /* Styles for the navigation buttons */
+  #backBtn, #forwardBtn{
+    margin: 10px; /* Adds margin around buttons */
+    width: 40px; /* Sets a fixed width for buttons */
+
+  }
+
+   /* Styles the gallery container to allow horizontal scrolling */
+  .gallery{
+    display: flex; /* Uses flexbox for layout */
+    overflow: hidden; /* Hides overflow to create a clean look */
+    position: relative; /* Enables child elements to be positioned absolutely within this element */
+    width: 100%; /* Ensures the gallery takes the full width of the parent */
+  }
+
+  /* Sets up the individual gallery divs for scrolling */
+  .gallery div{
+    display: flex; /* Uses flexbox for child image alignment */
+    transition: transform 0,5s ease; /* Smooth transition for image scrolling */
+  }
+
+  /* Styles for each span in the gallery for sliding effects */
+  .gallery span{
+    min-width: 100%; /* Each span takes the full width of the gallery */
+    flex-shrink: 0; /* Each span takes the full width of the gallery */
+    display: none; /* Initially hides all spans */
+
+  }
+
+  /* Displays the first span in the gallery */
+  .gallery span:first-child{
+    display: block; /* Only the first image is visible */
+  }
+
+  /* Hides elements with this class on mobile devices */
+  .hideOnMobile{
+    display: none; /* Ensures these elements do not show on smaller screens */
+  }
+
+  /* Shows the hamburger menu for mobile navigation */
+  .hamburger-menu{
+    display: block; /* Makes the hamburger menu visible */
+  }
+
+  /* Adjusts hero text sizes for mobile devices */
+  .hero-text h1 {
+    font-size: 2rem; /* Sets font size for the main heading to 2rem*/
+  }
+  .hero-text h2 {
+    font-size: 1.4rem; /* Sets font size for the subheading to 1.4rem*/
+  }
+
+  /* Hides the middle section of the Navbar on mobile devices */
+  .middle-section {
+    display: none; /* Prevents the middle section from displaying */
+  }
+
+  /* Sets sidebar width to full on mobile devices */
+  .sidebar{
+    width: 100%; /* Ensures sidebar takes full width */
+  }
+
+  /* Adjusts background position for better appearance on smaller screens */
+  .background-container {
+    background-position: center top; /* Centres the background at the top */
+  }
+
+  /* Changes the grid layout of the main about us container for mobile */
+  .container {
+    grid-template-columns: 1fr; /* Sets single column layout for mobile */
+    grid-template-areas:
+      "AboutParagraph1"
+      "AboutImage1"
+      "AboutParagraph2"
+      "AboutImage2"
+      "AboutParagraph3"
+      "AboutImage3"; /* Specifies the order of items in the grid */
+  }
+
+  /* Adjusts padding for event header on mobile */
+  .events-header h1 {
+    padding-top: 80px; /* Adds top padding to 80px */
+    padding-left: 40px; /* Adds 40px padding on the left */
+  }
+  
+  /* Sets margin for the event container */
+  .events-container {
+    margin: 20px; /* Provides uniform margin around the events container */
+  }
+
+  /* Adjusts padding for the event titles */
+  .events-title {
+    padding-top: 10px; /* Adds top padding */
+    padding-bottom: 10px; /* Adds bottom padding */
+  }
+
+  /* Adjusts bottom padding for the head-on festival name section */
+  .head-on {
+    padding-bottom: 10px;
+  }
+
+  /* Adjusts card layout to full width on smaller screens */
+  .card {
+    flex: 1 1 100%; /* Full width on smaller screens */      
+  }
+
+  /* Adjusts layout for the map section on mobile */
+ .map-section {
+    flex-direction: column; /* Stacks items vertically */
+    gap:1em; /* Adds 1em space between stacked items */
+    padding-bottom: 70px; /* Adds padding at the bottom */
+  }
+
+   /* Removes padding from the map container */
+  .map-container {
+    padding: 0px; /* No padding to maximize space */
+  }
+  
+  /* Sets iframe height and width for responsiveness */
+  iframe {
+    height: 300px; /* Fixed height for iframe */
+    width: auto; /* Width adjusts automatically */
+  }
+
+/* Styles for heading in the visit us box section */
+.box h1 {
+  padding-top: 50px; /* Adds top padding of 50px*/
+  font-size: 2em; /* Sets larger font size of 2em for headings */
+  }
+
+/* Reduces padding in the box for smaller screens */
+.box {
+  padding: 20px; /* Provides reduced padding for mobile */
+  }
+
+  /* Adjusts layout for visit us text and image section on mobile */
+.visit-us-paragraph-picture {
+  padding-top: 0px; /* Removes top padding */
+  grid-template-columns: 1fr; /* Sets single column layout */
+  grid-template-areas:
+    "visit-header"
+    "visit-image-container" /* Specifies order for mobile layout */
+}  
+
+/* Sets nearby grid layout to a single column on mobile */
+.nearby-grid {
+  grid-template-columns: repeat(1, 1fr); /* One column layout for mobile */
+}
+
+/* Hides menu items on mobile devices */
+.menu li {
+  display: none; /* Prevents meny items from displaying on smaller screens */
+} 
+ 
+}
+

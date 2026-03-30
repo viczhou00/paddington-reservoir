@@ -1,0 +1,193 @@
+<!--Declares the language the document will be coded in-->
+<!DOCTYPE html>
+<!--Sets the language of the document to english-->
+<html lang="en">
+  <head>
+      <!-- Meta information about the document-->
+      <!--Sets the character encoding to UTF-8 for web compatibility-->
+      <meta charset="UTF-8"> 
+      <!--Meta description for Search Engine Optimisation-->
+      <meta name="description" content="Paddington Reservoir Gardens">
+      <!--Author of the webpage (myself)-->
+      <meta name="author" content="Victoria Zhou">
+      <!--Responsive design for mobile devices-->  
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Title of the webpage displayed in the browser tab-->
+      <title>Paddington Reservoir Garden</title>
+
+      <!--Link to Google Fonts for custom typography styles-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+      
+      <!--Link to line awesome icons for social media and other icons-->
+      <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+      
+      <!--Link to external CSS stylesheet-->
+      <link rel="stylesheet" href="Style.css">
+  </head>
+
+  <body>
+    <!--The header section which contains the Navbar-->
+    <header>  
+      <!--Defines the area for navigation-->
+      <nav>
+        <!--Unordered list for sidebar navigation on smaller screen sizes-->
+        <ul class="sidebar">
+          <!--Close button in sidebar on smaller screen sizes which closes the sidebar using Javascript-->
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+          <li><a href="Home.html">HOME</a></li>
+          <li><a href="About.html">ABOUT</a></li>
+          <li><a href="Events.html">EVENTS</a></li>
+          <li><a href="MAP.html">MAP</a></li>
+          <li><a href="Visit.html">VISIT US</a></li>
+        </ul>
+        
+        <!--Container div for aligning content within the navbar-->
+        <div class="navbar-container">
+          <!--Logo designed by myself which also links to the homepage-->
+          <div class="logo">
+            <a href="Home.html"><img src="Assets/paddington logo.svg" alt="Logo" style="width: 40px; height: auto;"></a>
+          </div>
+          <!--Div for the text in the middle of the Navbar-->  
+          <div class="middle-section"> PADDINGTON RESERVOIR GARDENS </div>
+          <!--Unordered list for main navigation bar for larger screens-->
+          <ul>
+            <!--Links for the main Navbar, hidden on mobile using Javascript-->
+            <li class="hideOnMobile"><a href="Home.html">HOME</a></li>
+            <li class="hideOnMobile"><a href="About.html">ABOUT</a></li>
+            <li class="hideOnMobile"><a href="Events.html">EVENTS</a></li>
+            <li class="hideOnMobile"><a href="MAP.html">MAP</a></li>
+            <li class="hideOnMobile"><a href="Visit.html">VISIT US</a></li>
+            <div onclick=showSidebar() class="hamburger-menu">
+            <!--Hamburger menu icon for toggling the sidebar in mobile view-->
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </a>
+            </div>
+          </ul>
+        </div>
+      </nav>
+      <!--End of header section-->
+    </header>
+  
+    <!--The main container for "visit us" and "features" sections-->
+    <main>
+      <!--Section displaying information about visiting the gardens-->
+      <section class="visit-us-paragraph-picture">
+        <!--Header class introducing the "visit us" content-->
+        <header class="visit-header">
+          <!--Section heading-->
+          <h2>Visit Us</h2>
+          <br>      
+          <!--Description paragraph about accessibility and operational hours-->
+          <p class="opening-info"> The park is comprised of two levels. The street level is accessible at all times but the lower chambers, accessible by an elevator, are only open during daylight hours.</p>
+        </header>
+
+        <!--Image container for an image of the gardens-->
+        <figure class="visit-image-container">
+          <!--Image showing man sitting on chair in the gardens-->
+          <!--This image was taken by myself; copyright Victoria Zhou-->
+          <img class="visit-image" src="Images/DSCF0236.jpg" alt="Sitting in Paddington Reservoir">
+          <!-- <figcaption>Man sitting in Paddington Reservoir.</figcaption> -->
+        </figure> 
+      </section>  
+    
+      <!--Section for listing features of the Gardens-->
+      <section class="features-section">
+      <!--Heading for the "features" section-->
+      <h2 class="features">Features</h2>
+      <!--Subsection containing feature cards-->
+      <section class="visit-us">
+        <!--Container for organising the feature cards in a grid layout-->
+        <div class="card-container">
+
+          <!-- Each feature is represented as an individual article in a card format, styled consistently using shared classes -->
+  
+          <!--Card 1: Bus stops-->
+          <article class="visit-box">
+            <div class="box-content">
+              <!--Icon representing bus stop accessibility-->
+              <i class="las la-bus icon"></i>
+              <!--Title of feature card-->
+              <h2 class="title">Bus Stops Close By</h2>
+              <!--Description of feature card-->
+              <p class="description">The Gardens is accessible by several bus lines, making it convenient for visitors traveling by public transport. Key bus routes stopping near the Gardens include: 333, 352, and 440 lines.</p>
+            </div>
+          </article>
+
+          <!--Card 2: Sunken garden and heritage items-->
+          <article class="visit-box">
+            <div class="box-content">
+              <!--Icon representing historical features-->
+              <i class="las la-monument icon"></i>
+              <!--Title of the feature card-->
+              <h2 class="title">Sunken Garden and Heritage Items</h2>
+               <!--Description of feature card-->
+              <p class="description">The Gardens feature a sunken garden, alongside preserved heritage items like brick arches that reflect its historical significance as a 19th-century water reservoir.</p>
+            </div>
+          </article>
+
+          <!--Card 3: Seating included-->
+          <article class="visit-box">
+            <div class="box-content">
+              <!-- Icon representing seating features -->
+              <i class="las la-chair icon"></i>
+              <!-- Title of the feature card -->
+              <h2 class="title">Seating Included</h2>
+              <!--Description of feature card-->
+              <p class="description">The Gardens offers a variety of seating options, including deck chairs and landscaped seating areas. These spaces provide visitors with comfortable spots to relax and enjoy the garden's tranquil environment.</p>
+            </div>
+          </article>
+
+          <!--Card 4: Open and enclosed grass lawns-->
+          <article class="visit-box">
+            <div class="box-content">
+              <!-- Icon representing the lawn areas -->
+              <i class="lab la-pagelines icon"></i>
+              <!-- Title of the feature card -->
+              <h2 class="title">Open and Enclosed Grass Lawns</h2>
+              <!--Description of feature card-->
+              <p class="description">The Gardens feature both open and enclosed grass lawns. The open lawns provide spacious areas for recreational activities, while the enclosed lawns offer a more intimate setting. </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    <!--End of main section-->
+    </main>
+
+    <!--Footer containing social media links, navigation links, and copyright-->
+    <footer>
+      <!--Unordered list for social media icons for Instagram, Twitter and Facebook with links that link to sites-->
+      <ul class="social-icon">
+        <li><a href="https://www.instagram.com/explore/locations/113509/paddington-reservoir-gardens/"><i class="lab la-instagram"></i></a></li>
+        <li><a href="https://x.com/AdaptiveReuse/status/1639824423577595910"><i class="lab la-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/pages/Paddington%20Reservoir%20Gardens/176541355803642/"><i class="lab la-facebook"></i></a></li>
+      </ul>
+      <!--Unordered list for footer navigation with quick links to the other pages-->
+      <ul class="menu">
+        <li><a href="Home.html">HOME</a></li>
+        <li><a href="About.html">ABOUT</a></li>
+        <li><a href="Events.html">EVENTS</a></li>
+        <li><a href="MAP.html">MAP</a></li>
+        <li><a href="Visit.html">VISIT US</a></li>
+      </ul>
+      <!--Copyright information and credit-->
+      <p>Copyright © 2024; Designed by Victoria Zhou</p>
+    </footer>  
+
+      <!--Javascript for toggling the sidebar on and off on smaller screens especially for mobile screens-->
+      <script> 
+        //Function to display the sidebar when the hamburger menu is clicked
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'flex'
+        }
+
+        //Function to hide the sidebar when the close button inside the sidebar is clicked
+        function hideSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+        }
+      </script>
+  </body>

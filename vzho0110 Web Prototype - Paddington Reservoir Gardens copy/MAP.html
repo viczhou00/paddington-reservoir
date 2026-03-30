@@ -1,0 +1,184 @@
+<!--Declares the language the document will be coded in-->
+<!DOCTYPE html>
+<!--Sets the language of the document to english-->
+<html lang="en">
+  <head>
+      <!-- Meta information about the document-->
+      <!--Sets the character encoding to UTF-8 for web compatibility-->
+      <meta charset="UTF-8"> 
+      <!--Meta description for Search Engine Optimisation-->
+      <meta name="description" content="Paddington Reservoir Gardens">
+      <!--Author of the webpage (myself)-->
+      <meta name="author" content="Victoria Zhou">
+      <!--Responsive design for mobile devices-->  
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--Title of the webpage displayed in the browser tab-->
+      <title>Paddington Reservoir Garden</title>
+
+      <!--Link to Google Fonts for custom typography styles-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+      
+      <!--Link to line awesome icons for social media and other icons-->
+      <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+      
+      <!--Link to external CSS stylesheet-->
+      <link rel="stylesheet" href="Style.css">
+  </head>
+
+  <body>
+    <!--The header section which contains the Navbar-->
+    <header>  
+      <!--Defines the area for navigation-->
+      <nav>
+        <!--Unordered list for sidebar navigation on smaller screen sizes-->
+        <ul class="sidebar">
+          <!--Close button in sidebar on smaller screen sizes which closes the sidebar using Javascript-->
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+          <li><a href="Home.html">HOME</a></li>
+          <li><a href="About.html">ABOUT</a></li>
+          <li><a href="Events.html">EVENTS</a></li>
+          <li><a href="MAP.html">MAP</a></li>
+          <li><a href="Visit.html">VISIT US</a></li>
+        </ul>
+        
+        <!--Container div for aligning content within the navbar-->
+        <div class="navbar-container">
+          <!--Logo designed by myself which also links to the homepage-->
+          <div class="logo">
+            <a href="Home.html"><img src="Assets/paddington logo.svg" alt="Logo" style="width: 40px; height: auto;"></a>
+          </div>
+          <!--Div for the text in the middle of the Navbar-->  
+          <div class="middle-section"> PADDINGTON RESERVOIR GARDENS </div>
+          <!--Unordered list for main navigation bar for larger screens-->
+          <ul>
+            <!--Links for the main Navbar, hidden on mobile using Javascript-->
+            <li class="hideOnMobile"><a href="Home.html">HOME</a></li>
+            <li class="hideOnMobile"><a href="About.html">ABOUT</a></li>
+            <li class="hideOnMobile"><a href="Events.html">EVENTS</a></li>
+            <li class="hideOnMobile"><a href="MAP.html">MAP</a></li>
+            <li class="hideOnMobile"><a href="Visit.html">VISIT US</a></li>
+            <div onclick=showSidebar() class="hamburger-menu">
+            <!--Hamburger menu icon for toggling the sidebar in mobile view-->
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </a>
+            </div>
+          </ul>
+        </div>
+      </nav>
+      <!--End of header section-->
+    </header>
+
+  <!--The main section for displaying the location of the Paddington Reservoir Gardens and the nearby attractions-->  
+  <main>
+    <!--Section which displays the map and location description-->
+    <section class="map-section">
+        <div class="box">
+            <!--Title of the section which introduces the location-->
+            <h1>Our Location</h1>
+            <!--Description paragraph which explains the location, accessibility and surrounding highlights-->
+            <p> Paddington Reservoir Gardens is conveniently situated in Sydney's vibrant inner east, nestled between the charming Paddington neighborhood and the historic suburb of Woollahra. Easily accessible by public transport, the Gardens are just a short walk from local bus stops, making it simple to visit from anywhere in the city. Explore the surrounding area, where you’ll find boutique shops, cafés, and cultural attractions, all within close proximity.</p>
+        </div>
+
+        <!--Embedded google maps iframe to display the location of Paddington Reservoir Gardens on an interactive map-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13248.682778862709!2d151.21646001697954!3d-33.88525745999397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae05db0eb67f%3A0x6aba4572ccc65670!2sPaddington%20Reservoir%20Gardens!5e0!3m2!1sen!2sau!4v1730564461952!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!--Section displaying nearby attractions-->
+    <section class="nearby-attractions">
+      <div class="map-container">
+        <!--Title for nearby attractions section-->
+        <h1>Nearby Attractions</h1>
+        <!--Div with a class for styling serving as a grid container for organising nearby attraction cards in a responsive layout-->
+        <div class="nearby-grid">
+
+          <!--Each attraction is enclosed in an article with a card layout, including an image and attraction name-->
+          <article class="nearby cards">
+            <!--Clickable attraction image of the Sydney Cricket Grounds-->
+            <!-- This image's copyright is from Mac Dalmulder-->
+            <a href="https://www.sydneycricketground.com.au"><img src="Images/Sydney_Cricket_Ground_(24509044622).jpg" alt="Image of the Sydney Cricket Grounds"/></a>
+            <!-- Container for the attraction's name, including an icon for a location marker and the name text -->
+            <div class="attraction-name">
+              <i class="las la-map-marker"></i>  <!--Location icon-->
+              <span>Sydney Cricket Ground</span> <!--Name of attraction-->
+            </div>
+          </article>
+
+          <!--Each attraction is enclosed in an article with a card layout, including an image and attraction name-->
+          <article class="nearby cards">
+            <!--Clickable attraction image of the Paddington Markets-->
+            <!-- This image's copyright is from Paddington United Church-->
+            <a href="https://www.paddingtonmarkets.com.au"><img src="Images/828aaa_3f70898c806b44dbb38c435ffaa958d4~mv2.jpg.webp" alt="Image of food sold at the Paddington Markets"/></a>
+            <!-- Container for the attraction's name, including an icon for a location marker and the name text -->
+            <div class="attraction-name">
+              <i class="las la-map-marker"></i> <!--Location icon-->
+              <span>Paddington Markets</span> <!--Name of attraction-->
+            </div>
+          </article>
+
+          <!--Each attraction is enclosed in an article with a card layout, including an image and attraction name-->
+          <article class="nearby cards">
+            <!--Clickable attraction image of the Imperial Hotel Paddington-->
+            <!-- This image's copyright is from dunedoo-->
+            <a href="https://www.imperialhotelpaddington.com.au"><img src="Images/6989685391_404f79fc47_k.jpg" alt="Image of the Imperial Hotel in Paddington"/></a>
+            <!-- Container for the attraction's name, including an icon for a location marker and the name text -->
+            <div class="attraction-name">
+              <i class="las la-map-marker"></i> <!--Location icon-->
+              <span>Imperial Hotel Paddington</span> <!--Name of attraction-->
+            </div>
+          </article>
+
+          <!--Each attraction is enclosed in an article with a card layout, including an image and attraction name-->
+          <article class="nearby cards">
+            <!--Clickable attraction image of the Chauvel Cinema-->
+            <!-- This image's copyright is from Flicks-->
+            <a href="https://www.palacecinemas.com.au/cinemas/chauvel-cinema"><img src="Images/Nearby Attractions 4.jpg" alt="Image of the Chauvel Cinema"/></a>
+             <!-- Container for the attraction's name, including an icon for a location marker and the name text -->
+            <div class="attraction-name">
+              <i class="las la-map-marker"></i> <!--Location icon-->
+              <span>Chauvel Cinema</span> <!--Name of attraction-->
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!--End of main section-->
+  </main>
+
+  <!--Footer containing social media links, navigation links, and copyright-->
+  <footer>
+    <!--Unordered list for social media icons for Instagram, Twitter and Facebook with links that link to sites-->
+    <ul class="social-icon">
+      <li><a href="https://www.instagram.com/explore/locations/113509/paddington-reservoir-gardens/"><i class="lab la-instagram"></i></a></li>
+      <li><a href="https://x.com/AdaptiveReuse/status/1639824423577595910"><i class="lab la-twitter"></i></a></li>
+      <li><a href="https://www.facebook.com/pages/Paddington%20Reservoir%20Gardens/176541355803642/"><i class="lab la-facebook"></i></a></li>
+    </ul>
+    <!--Unordered list for footer navigation with quick links to the other pages-->
+    <ul class="menu">
+      <li><a href="Home.html">HOME</a></li>
+      <li><a href="About.html">ABOUT</a></li>
+      <li><a href="Events.html">EVENTS</a></li>
+      <li><a href="MAP.html">MAP</a></li>
+      <li><a href="Visit.html">VISIT US</a></li>
+    </ul>
+    <!--Copyright information and credit-->
+    <p>Copyright © 2024; Designed by Victoria Zhou</p>
+  </footer>  
+
+    <!--Javascript for toggling the sidebar on and off on smaller screens especially for mobile screens-->
+    <script> 
+      //Function to display the sidebar when the hamburger menu is clicked
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+
+      //Function to hide the sidebar when the close button inside the sidebar is clicked
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
+
+  </body>
