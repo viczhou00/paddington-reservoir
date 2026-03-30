@@ -688,12 +688,9 @@ iframe{
 
 /* Description styling at the bottom of the visit box */
 .card-container .visit-box .box-content .description {
-  position: absolute; /* Positions the description within the box */
-  bottom: 40px; /* Positions description 40px from the bottom of the box */
-  max-width: 80%; /* Limits description width to 80% of the container */
-  font-size: 14px; /* Sets font size of description text */
-  margin-top: auto; /* Automatically adds margin above the description to push it down */
-  line-height: 1.6; /* Sets line height for readability */
+  margin-top: auto;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 /* Media query for devices with a maximum width of 768px like mobiles and tablets */
