@@ -16,7 +16,7 @@ body {
 .background-container{
   height: 100vh; /* Sets height of the background container to 100 viewport height */
   /* This background image was taken by myself; Copyright Victoria Zhou */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/Paddington Landing Page.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/Paddington Landing Page.jpg");
   /* Inserts the background image and sets gradient overlay for greater contrast */
   background-size: cover; /* Ensures the background image covers the entire container */
   background-repeat: no-repeat; /* Prevents the background image from repeating */
